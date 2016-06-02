@@ -238,6 +238,10 @@ static const uint8_t SCK  = PIN_SPI_SCK ;
 #define MYSX_A2 (15ul)
 #define MYSX_SPI SPI2
 
+/*
+ * Onboard hardware
+ */
+
 #define MY_SIGNING_ATSHA204_PIN (17ul)
 #define MY_HW_ERR_LED_PIN LED_RED
 #define MY_HW_RX_LED_PIN LED_YELLOW
@@ -248,6 +252,8 @@ static const uint8_t SCK  = PIN_SPI_SCK ;
 #define MY_RF24_CE_PIN (34ul)
 #define MY_RF24_CS_PIN (29ul)
 #define MY_RF24_IRQ_PIN (31ul)
+#define MY_SDCARD_DETECT (35ul)
+#define MY_SDCARD_CS (33ul)
 
 /*----------------------------------------------------------------------------
  *        Arduino objects - C++ only
