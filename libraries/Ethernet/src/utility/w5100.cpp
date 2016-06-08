@@ -30,10 +30,10 @@ void W5100Class::init(void)
   SPI_ETH.begin();
   initSS();
 #else
-  SPI.begin(SPI_CS);
+  SPI_ETH.begin(ETHERNET_SHIELD_SPI_CS);
   // Set clock to 4Mhz (W5100 should support up to about 14Mhz)
-  SPI_ETH.setClockDivider(SPI_CS, 21);
-  SPI_ETH.setDataMode(SPI_CS, SPI_MODE0);
+  SPI_ETH.setClockDivider(ETHERNET_SHIELD_SPI_CS, 21);
+  SPI_ETH.setDataMode(ETHERNET_SHIELD_SPI_CS, SPI_MODE0);
 #endif
   SPI_ETH.beginTransaction(SPI_ETHERNET_SETTINGS);
   writeMR(1<<RST);
@@ -144,10 +144,10 @@ uint8_t W5100Class::write(uint16_t _addr, uint8_t _data)
   SPI_ETH.transfer(_data);
   resetSS();
 #else
-  SPI_ETH.transfer(SPI_CS, 0xF0, SPI_CONTINUE);
-  SPI_ETH.transfer(SPI_CS, _addr >> 8, SPI_CONTINUE);
-  SPI_ETH.transfer(SPI_CS, _addr & 0xFF, SPI_CONTINUE);
-  SPI_ETH.transfer(SPI_CS, _data);
+  SPI_ETH.transfer(ETHERNET_SHIELD_SPI_CS, 0xF0, SPI_CONTINUE);
+  SPI_ETH.transfer(ETHERNET_SHIELD_SPI_CS, _addr >> 8, SPI_CONTINUE);
+  SPI_ETH.transfer(ETHERNET_SHIELD_SPI_CS, _addr & 0xFF, SPI_CONTINUE);
+  SPI_ETH.transfer(ETHERNET_SHIELD_SPI_CS, _data);
 #endif
   return 1;
 }
@@ -165,10 +165,10 @@ uint16_t W5100Class::write(uint16_t _addr, const uint8_t *_buf, uint16_t _len)
     SPI_ETH.transfer(_buf[i]);
     resetSS();
 #else
-    SPI_ETH.transfer(SPI_CS, 0xF0, SPI_CONTINUE);
-    SPI_ETH.transfer(SPI_CS, _addr >> 8, SPI_CONTINUE);
-    SPI_ETH.transfer(SPI_CS, _addr & 0xFF, SPI_CONTINUE);
-    SPI_ETH.transfer(SPI_CS, _buf[i]);
+    SPI_ETH.transfer(ETHERNET_SHIELD_SPI_CS, 0xF0, SPI_CONTINUE);
+    SPI_ETH.transfer(ETHERNET_SHIELD_SPI_CS, _addr >> 8, SPI_CONTINUE);
+    SPI_ETH.transfer(ETHERNET_SHIELD_SPI_CS, _addr & 0xFF, SPI_CONTINUE);
+    SPI_ETH.transfer(ETHERNET_SHIELD_SPI_CS, _buf[i]);
     _addr++;
 #endif
   }
@@ -185,10 +185,10 @@ uint8_t W5100Class::read(uint16_t _addr)
   uint8_t _data = SPI_ETH.transfer(0);
   resetSS();
 #else
-  SPI_ETH.transfer(SPI_CS, 0x0F, SPI_CONTINUE);
-  SPI_ETH.transfer(SPI_CS, _addr >> 8, SPI_CONTINUE);
-  SPI_ETH.transfer(SPI_CS, _addr & 0xFF, SPI_CONTINUE);
-  uint8_t _data = SPI_ETH.transfer(SPI_CS, 0);
+  SPI_ETH.transfer(ETHERNET_SHIELD_SPI_CS, 0x0F, SPI_CONTINUE);
+  SPI_ETH.transfer(ETHERNET_SHIELD_SPI_CS, _addr >> 8, SPI_CONTINUE);
+  SPI_ETH.transfer(ETHERNET_SHIELD_SPI_CS, _addr & 0xFF, SPI_CONTINUE);
+  uint8_t _data = SPI_ETH.transfer(ETHERNET_SHIELD_SPI_CS, 0);
 #endif
   return _data;
 }
@@ -206,10 +206,10 @@ uint16_t W5100Class::read(uint16_t _addr, uint8_t *_buf, uint16_t _len)
     _buf[i] = SPI_ETH.transfer(0);
     resetSS();
 #else
-    SPI_ETH.transfer(SPI_CS, 0x0F, SPI_CONTINUE);
-    SPI_ETH.transfer(SPI_CS, _addr >> 8, SPI_CONTINUE);
-    SPI_ETH.transfer(SPI_CS, _addr & 0xFF, SPI_CONTINUE);
-    _buf[i] = SPI_ETH.transfer(SPI_CS, 0);
+    SPI_ETH.transfer(ETHERNET_SHIELD_SPI_CS, 0x0F, SPI_CONTINUE);
+    SPI_ETH.transfer(ETHERNET_SHIELD_SPI_CS, _addr >> 8, SPI_CONTINUE);
+    SPI_ETH.transfer(ETHERNET_SHIELD_SPI_CS, _addr & 0xFF, SPI_CONTINUE);
+    _buf[i] = SPI_ETH.transfer(ETHERNET_SHIELD_SPI_CS, 0);
     _addr++;
 #endif
   }

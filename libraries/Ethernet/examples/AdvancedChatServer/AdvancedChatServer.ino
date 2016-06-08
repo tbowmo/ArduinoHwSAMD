@@ -1,4 +1,4 @@
-/* 
+/*
  Advanced Chat Server
 
  A more advanced server that distributes any incoming messages
