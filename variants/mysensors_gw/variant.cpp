@@ -110,10 +110,10 @@ const PinDescription g_APinDescription[]=
   +------------+------------------+--------+-----------------+--------+-----+-----+-----+-----+---------+---------+--------+--------+----------+----------+
   */
 
-  { PORTB, 12, PIO_SERCOM_ALT, (PIN_ATTR_NONE),                             No_ADC_Channel, NOT_ON_PWM, NOT_ON_TIMER, EXTERNAL_INT_NONE }, // MOSI: SERCOM4/PAD[0]
-  { PORTB, 14, PIO_SERCOM_ALT, (PIN_ATTR_NONE),                             No_ADC_Channel, NOT_ON_PWM, NOT_ON_TIMER, EXTERNAL_INT_NONE }, // MISO: SERCOM4/PAD[2]
-  { PORTB, 13, PIO_SERCOM_ALT, (PIN_ATTR_NONE),                             No_ADC_Channel, NOT_ON_PWM, NOT_ON_TIMER, EXTERNAL_INT_NONE }, // SS: SERCOM4/PAD[3]
-  { PORTB, 15, PIO_SERCOM_ALT, (PIN_ATTR_NONE),                             No_ADC_Channel, NOT_ON_PWM, NOT_ON_TIMER, EXTERNAL_INT_NONE }, // SCK: SERCOM1/PAD[1]
+  { PORTB, 12, PIO_SERCOM,     (PIN_ATTR_NONE),                             No_ADC_Channel, NOT_ON_PWM, NOT_ON_TIMER, EXTERNAL_INT_NONE }, // MOSI: SERCOM4/PAD[0]
+  { PORTB, 14, PIO_SERCOM,     (PIN_ATTR_NONE),                             No_ADC_Channel, NOT_ON_PWM, NOT_ON_TIMER, EXTERNAL_INT_NONE }, // MISO: SERCOM4/PAD[2]
+  { PORTB, 13, PIO_SERCOM,     (PIN_ATTR_NONE),                             No_ADC_Channel, NOT_ON_PWM, NOT_ON_TIMER, EXTERNAL_INT_NONE }, // SS: SERCOM4/PAD[3]
+  { PORTB, 15, PIO_SERCOM,     (PIN_ATTR_NONE),                             No_ADC_Channel, NOT_ON_PWM, NOT_ON_TIMER, EXTERNAL_INT_NONE }, // SCK: SERCOM1/PAD[1]
   { PORTB, 11, PIO_OUTPUT,     (PIN_ATTR_DIGITAL),                          No_ADC_Channel, NOT_ON_PWM, NOT_ON_TIMER, EXTERNAL_INT_NONE }, // Reset line
   { PORTA, 16, PIO_SERCOM,     (PIN_ATTR_NONE),                             No_ADC_Channel, NOT_ON_PWM, NOT_ON_TIMER, EXTERNAL_INT_NONE }, // MOSI: SERCOM4/PAD[0]
   { PORTA, 18, PIO_SERCOM,     (PIN_ATTR_NONE),                             No_ADC_Channel, NOT_ON_PWM, NOT_ON_TIMER, EXTERNAL_INT_NONE }, // MISO: SERCOM4/PAD[2]
