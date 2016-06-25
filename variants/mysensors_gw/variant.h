@@ -242,7 +242,7 @@ static const uint8_t SCK  = PIN_SPI_SCK ;
  * Onboard hardware
  */
 
-#define MY_SIGNING_ATSHA204_PIN (17ul)
+#define MY_SIGNING_ATSHA204_PIN (40ul)
 #define MY_HW_ERR_LED_PIN LED_RED
 #define MY_HW_RX_LED_PIN LED_YELLOW
 #define MY_HW_TX_LED_PIN LED_GREEN

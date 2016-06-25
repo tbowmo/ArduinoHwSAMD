@@ -138,7 +138,8 @@ const PinDescription g_APinDescription[]=
    | 39         | BOOTMODE         |  PA15  |                 |   15   |     |     |     |     |   2/03  |   4/3   |  TC3/1 | TCC0/5 |          | GCLK_IO1 |
    | 39         | INCL_SW          |  PB01  |                 |    1   |   9 |     | Y07 |     |         |   5/3   |  TC7/1 |        |          | GCLK_IO1 |
    | 39         | SWC1             |  PB05  |                 |    5   |  13 |     | Y11 |     |         |         |        |        |          |          |
-   | 39         | SWC2             |  PB06  |                 |    6   |  14 |     | Y12 |     |         |         |        |        |          |          |
+   | 39         | SWC2             |  PA06  |                 |    6   |  14 |     | Y12 |     |         |         |        |        |          |          |
+   | 40         | SECURITY         |  PA11  | ATSHA204        |        |     |     |     |     |         |         |        |        |          |          |
    +------------+------------------+--------+-----------------+--------+-----+-----+-----+-----+---------+---------+--------+--------+----------+----------+
    */
 
@@ -148,7 +149,8 @@ const PinDescription g_APinDescription[]=
   { PORTA, 15, PIO_DIGITAL, PIN_ATTR_DIGITAL,                             No_ADC_Channel, NOT_ON_PWM, NOT_ON_TIMER, EXTERNAL_INT_15 },
   { PORTB,  1, PIO_DIGITAL, PIN_ATTR_DIGITAL,                             No_ADC_Channel, NOT_ON_PWM, NOT_ON_TIMER, EXTERNAL_INT_1  },
   { PORTB,  5, PIO_DIGITAL, PIN_ATTR_DIGITAL,                             No_ADC_Channel, NOT_ON_PWM, NOT_ON_TIMER, EXTERNAL_INT_5  },
-  { PORTA,  6, PIO_DIGITAL, PIN_ATTR_DIGITAL,                             No_ADC_Channel, NOT_ON_PWM, NOT_ON_TIMER, EXTERNAL_INT_6  }
+  { PORTA,  6, PIO_DIGITAL, PIN_ATTR_DIGITAL,                             No_ADC_Channel, NOT_ON_PWM, NOT_ON_TIMER, EXTERNAL_INT_6  },
+  { PORTA, 11, PIO_DIGITAL, PIN_ATTR_DIGITAL,                             No_ADC_Channel, NOT_ON_PWM, NOT_ON_TIMER, EXTERNAL_INT_NONE}
 };
 
 const void* g_apTCInstances[TCC_INST_NUM+TC_INST_NUM]={ TCC0, TCC1, TCC2, TC3, TC4, TC5 } ;
