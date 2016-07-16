@@ -49,7 +49,7 @@ extern "C" {
  *----------------------------------------------------------------------------*/
 
 // Number of pins defined in PinDescription array
-#define PINS_COUNT (39u)
+#define PINS_COUNT (44u)
 #define NUM_DIGITAL_PINS (16u)
 //#define NUM_ANALOG_INPUTS    (6u)
 //#define NUM_ANALOG_OUTPUTS   (1u)
@@ -242,7 +242,7 @@ static const uint8_t SCK  = PIN_SPI_SCK ;
  * Onboard hardware
  */
 
-#define MY_SIGNING_ATSHA204_PIN (40ul)
+#define MY_SIGNING_ATSHA204_PIN (44ul)
 #define MY_HW_ERR_LED_PIN LED_RED
 #define MY_HW_RX_LED_PIN LED_YELLOW
 #define MY_HW_TX_LED_PIN LED_GREEN
@@ -254,7 +254,11 @@ static const uint8_t SCK  = PIN_SPI_SCK ;
 #define MY_RF24_IRQ_PIN (31ul)
 #define MY_SDCARD_DETECT (35ul)
 #define MY_SDCARD_CS (33ul)
+#define MY_INCLUSION_MODE_BUTTON_PIN (41ul)
 
+#define MY_SWC1 (38ul)
+#define MY_SWC2 (39ul)
+#define MY_SWC3 (40ul)
 /*----------------------------------------------------------------------------
  *        Arduino objects - C++ only
  *----------------------------------------------------------------------------*/

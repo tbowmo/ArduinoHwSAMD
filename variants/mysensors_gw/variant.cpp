@@ -134,22 +134,24 @@ const PinDescription g_APinDescription[]=
    +------------+------------------+--------+-----------------+--------+-----+-----+-----+-----+---------+---------+--------+--------+----------+----------+
    | 36         | BAT_DET          |  PB08  |                 |    8   |   2 |     | Y14 |     |         |   4/0   |  TC4/0 |        |          |          |
    | 37         | SUPPLY_DET       |  PB09  |                 |    9   |   3 |     | Y15 |     |         |   4/1   |  TC4/1 |        |          |          |
-   | 38         | TESTMODE         |  PB04  |                 |    4   |  12 |     | Y10 |     |         |         |        |        |          | GCLK_IO7 |
-   | 39         | BOOTMODE         |  PA15  |                 |   15   |     |     |     |     |   2/03  |   4/3   |  TC3/1 | TCC0/5 |          | GCLK_IO1 |
-   | 39         | INCL_SW          |  PB01  |                 |    1   |   9 |     | Y07 |     |         |   5/3   |  TC7/1 |        |          | GCLK_IO1 |
-   | 39         | SWC1             |  PB05  |                 |    5   |  13 |     | Y11 |     |         |         |        |        |          |          |
-   | 39         | SWC2             |  PA06  |                 |    6   |  14 |     | Y12 |     |         |         |        |        |          |          |
-   | 40         | SECURITY         |  PA11  | ATSHA204        |        |     |     |     |     |         |         |        |        |          |          |
+   | 38         | SWC1             |  PB06  |                 |    6   |  14 |     | Y12 |     |         |         |        |        |          |          |
+   | 39         | SWC2             |  PB04  |                 |    4   |  12 |     | Y10 |     |         |         |        |        |          |          |
+   | 40         | SWC3             |  PA15  |                 |   15   |     |     |     |     |   2/3   |   4/3   |  TC3/1 | TCC0/5 |          | GCLK_IO1 |
+   | 41         | INCL_SW          |  PB01  |                 |    1   |   9 |     | Y07 |     |         |   5/3   |  TC7/1 |        |          | GCLK_IO1 |
+   | 42         | RFM_DIO5         |  PB05  |                 |    5   |  13 |     | Y11 |     |         |         |        |        |          |          |
+   | 43         | RESET_RFM        |  PB10  |                 |   10   |     |     |     |     |         |   4/2   |  TC5/0 | TCC0/4 | I2S/MCK1 | GCLK_IO4 |
+   | 44         | SECURITY         |  PA11  | ATSHA204        |   11   |  19 |     | X03 |     |   0/3   |   2/3   | TCC1/1 | TCC0/3 | I2S/FS0  | GCLK_IO5 |
    +------------+------------------+--------+-----------------+--------+-----+-----+-----+-----+---------+---------+--------+--------+----------+----------+
    */
 
   { PORTB,  8, PIO_ANALOG,  PIN_ATTR_ANALOG,                              ADC_Channel2, NOT_ON_PWM, NOT_ON_TIMER, EXTERNAL_INT_NONE },
   { PORTB,  9, PIO_ANALOG,  PIN_ATTR_ANALOG,                              ADC_Channel3, NOT_ON_PWM, NOT_ON_TIMER, EXTERNAL_INT_NONE },
+  { PORTB,  6, PIO_DIGITAL, PIN_ATTR_DIGITAL,                             No_ADC_Channel, NOT_ON_PWM, NOT_ON_TIMER, EXTERNAL_INT_4  },
   { PORTB,  4, PIO_DIGITAL, PIN_ATTR_DIGITAL,                             No_ADC_Channel, NOT_ON_PWM, NOT_ON_TIMER, EXTERNAL_INT_4  },
   { PORTA, 15, PIO_DIGITAL, PIN_ATTR_DIGITAL,                             No_ADC_Channel, NOT_ON_PWM, NOT_ON_TIMER, EXTERNAL_INT_15 },
   { PORTB,  1, PIO_DIGITAL, PIN_ATTR_DIGITAL,                             No_ADC_Channel, NOT_ON_PWM, NOT_ON_TIMER, EXTERNAL_INT_1  },
   { PORTB,  5, PIO_DIGITAL, PIN_ATTR_DIGITAL,                             No_ADC_Channel, NOT_ON_PWM, NOT_ON_TIMER, EXTERNAL_INT_5  },
-  { PORTA,  6, PIO_DIGITAL, PIN_ATTR_DIGITAL,                             No_ADC_Channel, NOT_ON_PWM, NOT_ON_TIMER, EXTERNAL_INT_6  },
+  { PORTB, 10, PIO_DIGITAL, PIN_ATTR_DIGITAL,                             No_ADC_Channel, NOT_ON_PWM, NOT_ON_TIMER, EXTERNAL_INT_6  },
   { PORTA, 11, PIO_DIGITAL, PIN_ATTR_DIGITAL,                             No_ADC_Channel, NOT_ON_PWM, NOT_ON_TIMER, EXTERNAL_INT_NONE}
 };
 
