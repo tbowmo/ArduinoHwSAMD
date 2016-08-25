@@ -146,7 +146,7 @@ const PinDescription g_APinDescription[]=
 
   { PORTB,  8, PIO_ANALOG,  PIN_ATTR_ANALOG,                              ADC_Channel2, NOT_ON_PWM, NOT_ON_TIMER, EXTERNAL_INT_NONE },
   { PORTB,  9, PIO_ANALOG,  PIN_ATTR_ANALOG,                              ADC_Channel3, NOT_ON_PWM, NOT_ON_TIMER, EXTERNAL_INT_NONE },
-  { PORTB,  6, PIO_DIGITAL, PIN_ATTR_DIGITAL,                             No_ADC_Channel, NOT_ON_PWM, NOT_ON_TIMER, EXTERNAL_INT_4  },
+  { PORTB,  6, PIO_DIGITAL, PIN_ATTR_DIGITAL,                             No_ADC_Channel, NOT_ON_PWM, NOT_ON_TIMER, EXTERNAL_INT_6  },
   { PORTB,  4, PIO_DIGITAL, PIN_ATTR_DIGITAL,                             No_ADC_Channel, NOT_ON_PWM, NOT_ON_TIMER, EXTERNAL_INT_4  },
   { PORTA, 15, PIO_DIGITAL, PIN_ATTR_DIGITAL,                             No_ADC_Channel, NOT_ON_PWM, NOT_ON_TIMER, EXTERNAL_INT_15 },
   { PORTB,  1, PIO_DIGITAL, PIN_ATTR_DIGITAL,                             No_ADC_Channel, NOT_ON_PWM, NOT_ON_TIMER, EXTERNAL_INT_1  },
