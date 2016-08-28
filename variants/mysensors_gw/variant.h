@@ -239,6 +239,8 @@ static const uint8_t SCL = PIN_WIRE_SCL;
 #define MY_SWC1 (38ul)
 #define MY_SWC2 (39ul)
 #define MY_SWC3 (40ul)
+#define MY_BAT_DETECT (36ul)
+#define MY_SUPPLY_DETECT (37ul)
 /*----------------------------------------------------------------------------
  *        Arduino objects - C++ only
  *----------------------------------------------------------------------------*/

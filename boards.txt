@@ -17,6 +17,8 @@
 mysensors_gw_native.name=Sensebender Gateway
 mysensors_gw_native.vid.0=0x1209
 mysensors_gw_native.pid.0=0x6949
+mysensors_gw_native.vid.1=0x1209
+mysensors_gw_native.pid.1=0x6948
 mysensors_gw_native.upload.tool=bossac
 mysensors_gw_native.upload.protocol=sam-ba
 mysensors_gw_native.upload.maximum_size=262144
@@ -38,4 +40,4 @@ mysensors_gw_native.build.vid=0x1209
 mysensors_gw_native.build.pid=0x6949
 mysensors_gw_native.build.arch=samd
 mysensors_gw_native.bootloader.tool=openocd
-mysensors_gw_native.bootloader.file=zero/samd21_sam_ba.bin
+mysensors_gw_native.bootloader.file=mysensors_gw/samd21_sam_ba.bin
