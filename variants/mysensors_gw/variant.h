@@ -19,6 +19,8 @@
 #ifndef _VARIANT_MYSENSORS_GW_
 #define _VARIANT_MYSENSORS_GW_
 
+#define ARDUINO_SAMD_VARIANT_COMPLIANCE 10606
+
 /*----------------------------------------------------------------------------
  *        Definitions
  *----------------------------------------------------------------------------*/
@@ -54,15 +56,13 @@ extern "C" {
 //#define NUM_ANALOG_INPUTS    (6u)
 //#define NUM_ANALOG_OUTPUTS   (1u)
 
-#define digitalPinToPort(P) (&(PORT->Group[g_APinDescription[P].ulPort]))
-#define digitalPinToBitMask(P) (1 << g_APinDescription[P].ulPin)
+#define digitalPinToPort(P)        ( &(PORT->Group[g_APinDescription[P].ulPort]) )
+#define digitalPinToBitMask(P)     ( 1 << g_APinDescription[P].ulPin )
 //#define analogInPinToBit(P)        ( )
-#define portOutputRegister(port) (&(port->OUT.reg))
-#define portInputRegister(port) (&(port->IN.reg))
-#define portModeRegister(port) (&(port->DIR.reg))
-#define digitalPinHasPWM(P)                                                    \
-  (g_APinDescription[P].ulPWMChannel != NOT_ON_PWM ||                          \
-   g_APinDescription[P].ulTCChannel != NOT_ON_TIMER)
+#define portOutputRegister(port)   ( &(port->OUT.reg) )
+#define portInputRegister(port)    ( &(port->IN.reg) )
+#define portModeRegister(port)     ( &(port->DIR.reg) )
+#define digitalPinHasPWM(P)        ( g_APinDescription[P].ulPWMChannel != NOT_ON_PWM || g_APinDescription[P].ulTCChannel != NOT_ON_TIMER )
 
 /*
  * digitalPinToTimer(..) is AVR-specific and is not defined for SAMD
@@ -72,9 +72,6 @@ extern "C" {
  * https://github.com/arduino/Arduino/issues/1833
  */
 // #define digitalPinToTimer(P)
-
-// Interrupts
-#define digitalPinToInterrupt(P) (g_APinDescription[P].ulExtInt)
 
 // LEDs
 #define PIN_LED_13 (7u)
@@ -178,32 +175,15 @@ static const uint8_t SCK2 = PIN_SPI2_SCK;
 #define SPI_USER SPI2
 
 /*
-#define RADIO_SPI_MISO         (36u)
-#define RADIO_SPI_MOSI         (35u)
-#define RADIO_SPI_SCK          (37u)
-
-#define NET_SPI_MISO           (48u)
-#define NET_SPI_MOSI           (47u)
-#define NET_SPI_SCK            (49u)
-
-#define USR_SPI_MISO           (48u)
-#define USR_SPI_MOSI           (47u)
-#define USR_SPI_SCK            (49u)
-*/
-
-// static const uint8_t SS	  = PIN_A2 ;	// SERCOM4 last PAD is present
-// on A2 but HW SS isn't used. Set here only for reference.
-/*static const uint8_t MOSI = PIN_SPI_MOSI ;
-static const uint8_t MISO = PIN_SPI_MISO ;
-static const uint8_t SCK  = PIN_SPI_SCK ;
-*/
-/*
  * Wire Interfaces
  */
 #define WIRE_INTERFACES_COUNT 1
 
-#define PIN_WIRE_SDA (07u)
-#define PIN_WIRE_SCL (06u)
+#define PIN_WIRE_SDA         (07u)
+#define PIN_WIRE_SCL         (06u)
+
+static const uint8_t SDA = PIN_WIRE_SDA;
+static const uint8_t SCL = PIN_WIRE_SCL;
 
 /*
  * USB
@@ -259,6 +239,8 @@ static const uint8_t SCK  = PIN_SPI_SCK ;
 #define MY_SWC1 (38ul)
 #define MY_SWC2 (39ul)
 #define MY_SWC3 (40ul)
+#define MY_BAT_DETECT (36ul)
+#define MY_SUPPLY_DETECT (37ul)
 /*----------------------------------------------------------------------------
  *        Arduino objects - C++ only
  *----------------------------------------------------------------------------*/

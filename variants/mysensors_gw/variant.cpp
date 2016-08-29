@@ -118,13 +118,13 @@ const PinDescription g_APinDescription[]=
   { PORTA, 16, PIO_SERCOM,     (PIN_ATTR_NONE),                             No_ADC_Channel, NOT_ON_PWM, NOT_ON_TIMER, EXTERNAL_INT_NONE }, // MOSI: SERCOM4/PAD[0]
   { PORTA, 18, PIO_SERCOM,     (PIN_ATTR_NONE),                             No_ADC_Channel, NOT_ON_PWM, NOT_ON_TIMER, EXTERNAL_INT_NONE }, // MISO: SERCOM4/PAD[2]
   { PORTA, 17, PIO_SERCOM,     (PIN_ATTR_NONE),                             No_ADC_Channel, NOT_ON_PWM, NOT_ON_TIMER, EXTERNAL_INT_NONE }, // SS: SERCOM4/PAD[3]
-  { PORTA,  9, PIO_OUTPUT,     (PIN_ATTR_DIGITAL),                          No_ADC_Channel, NOT_ON_PWM, NOT_ON_TIMER, EXTERNAL_INT_9 }, // Reset line
-  { PORTA, 12, PIO_OUTPUT,     (PIN_ATTR_DIGITAL),                          No_ADC_Channel, NOT_ON_PWM, NOT_ON_TIMER, EXTERNAL_INT_12 }, // Reset line
-  { PORTA, 14, PIO_DIGITAL,    (PIN_ATTR_DIGITAL),                          No_ADC_Channel, NOT_ON_PWM, NOT_ON_TIMER, EXTERNAL_INT_14 }, // Reset line
-  { PORTA, 13, PIO_DIGITAL,    (PIN_ATTR_DIGITAL),                          No_ADC_Channel, NOT_ON_PWM, NOT_ON_TIMER, EXTERNAL_INT_13 }, // Reset line
-  { PORTA, 27, PIO_OUTPUT,     (PIN_ATTR_DIGITAL),                          No_ADC_Channel, NOT_ON_PWM, NOT_ON_TIMER, EXTERNAL_INT_NONE }, // Reset line
-  { PORTA, 28, PIO_OUTPUT,     (PIN_ATTR_DIGITAL),                          No_ADC_Channel, NOT_ON_PWM, NOT_ON_TIMER, EXTERNAL_INT_NONE }, // Reset line
-  { PORTB,  7, PIO_DIGITAL,    (PIN_ATTR_DIGITAL),                          No_ADC_Channel, NOT_ON_PWM, NOT_ON_TIMER, EXTERNAL_INT_7 }, // Reset line
+  { PORTA,  9, PIO_OUTPUT,     (PIN_ATTR_DIGITAL),                          No_ADC_Channel, NOT_ON_PWM, NOT_ON_TIMER, EXTERNAL_INT_9 },
+  { PORTA, 12, PIO_OUTPUT,     (PIN_ATTR_DIGITAL),                          No_ADC_Channel, NOT_ON_PWM, NOT_ON_TIMER, EXTERNAL_INT_12 },
+  { PORTA, 14, PIO_DIGITAL,    (PIN_ATTR_DIGITAL),                          No_ADC_Channel, NOT_ON_PWM, NOT_ON_TIMER, EXTERNAL_INT_14 },
+  { PORTA, 13, PIO_DIGITAL,    (PIN_ATTR_DIGITAL),                          No_ADC_Channel, NOT_ON_PWM, NOT_ON_TIMER, EXTERNAL_INT_13 },
+  { PORTA, 27, PIO_OUTPUT,     (PIN_ATTR_DIGITAL),                          No_ADC_Channel, NOT_ON_PWM, NOT_ON_TIMER, EXTERNAL_INT_NONE },
+  { PORTA, 28, PIO_OUTPUT,     (PIN_ATTR_DIGITAL),                          No_ADC_Channel, NOT_ON_PWM, NOT_ON_TIMER, EXTERNAL_INT_NONE },
+  { PORTB,  7, PIO_DIGITAL,    (PIN_ATTR_DIGITAL),                          No_ADC_Channel, NOT_ON_PWM, NOT_ON_TIMER, EXTERNAL_INT_7 },
 
   /*
    +------------+------------------+--------+-----------------+--------+-----------------------+---------+---------+--------+--------+----------+----------+
@@ -146,7 +146,7 @@ const PinDescription g_APinDescription[]=
 
   { PORTB,  8, PIO_ANALOG,  PIN_ATTR_ANALOG,                              ADC_Channel2, NOT_ON_PWM, NOT_ON_TIMER, EXTERNAL_INT_NONE },
   { PORTB,  9, PIO_ANALOG,  PIN_ATTR_ANALOG,                              ADC_Channel3, NOT_ON_PWM, NOT_ON_TIMER, EXTERNAL_INT_NONE },
-  { PORTB,  6, PIO_DIGITAL, PIN_ATTR_DIGITAL,                             No_ADC_Channel, NOT_ON_PWM, NOT_ON_TIMER, EXTERNAL_INT_4  },
+  { PORTB,  6, PIO_DIGITAL, PIN_ATTR_DIGITAL,                             No_ADC_Channel, NOT_ON_PWM, NOT_ON_TIMER, EXTERNAL_INT_6  },
   { PORTB,  4, PIO_DIGITAL, PIN_ATTR_DIGITAL,                             No_ADC_Channel, NOT_ON_PWM, NOT_ON_TIMER, EXTERNAL_INT_4  },
   { PORTA, 15, PIO_DIGITAL, PIN_ATTR_DIGITAL,                             No_ADC_Channel, NOT_ON_PWM, NOT_ON_TIMER, EXTERNAL_INT_15 },
   { PORTB,  1, PIO_DIGITAL, PIN_ATTR_DIGITAL,                             No_ADC_Channel, NOT_ON_PWM, NOT_ON_TIMER, EXTERNAL_INT_1  },
