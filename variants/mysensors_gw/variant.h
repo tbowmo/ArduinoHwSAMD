@@ -74,9 +74,9 @@ extern "C" {
 // #define digitalPinToTimer(P)
 
 // LEDs
-#define PIN_LED_13 (7u)
-#define PIN_LED_RXL (6u)
-#define PIN_LED_TXL (12u)
+#define PIN_LED_13 (16u)
+#define PIN_LED_RXL LED_ORANGE
+#define PIN_LED_TXL LED_ORANGE
 #define PIN_LED LED_BLUE
 #define PIN_LED2 LED_RED
 #define PIN_LED4 LED_GREEN
@@ -181,6 +181,8 @@ static const uint8_t SCK2 = PIN_SPI2_SCK;
 
 #define PIN_WIRE_SDA         (07u)
 #define PIN_WIRE_SCL         (06u)
+#define PERIPH_WIRE          sercom3
+#define WIRE_IT_HANDLER      SERCOM3_Handler
 
 static const uint8_t SDA = PIN_WIRE_SDA;
 static const uint8_t SCL = PIN_WIRE_SCL;
@@ -188,9 +190,9 @@ static const uint8_t SCL = PIN_WIRE_SCL;
 /*
  * USB
  */
-#define PIN_USB_HOST_ENABLE (27ul)
-#define PIN_USB_DM (28ul)
-#define PIN_USB_DP (29ul)
+#define PIN_USB_HOST_ENABLE LED_ORANGE
+#define PIN_USB_DM (45ul)
+#define PIN_USB_DP (46ul)
 
 #ifdef __cplusplus
 }

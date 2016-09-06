@@ -141,6 +141,8 @@ const PinDescription g_APinDescription[]=
    | 42         | RFM_DIO5         |  PB05  |                 |    5   |  13 |     | Y11 |     |         |         |        |        |          |          |
    | 43         | RESET_RFM        |  PB10  |                 |   10   |     |     |     |     |         |   4/2   |  TC5/0 | TCC0/4 | I2S/MCK1 | GCLK_IO4 |
    | 44         | SECURITY         |  PA11  | ATSHA204        |   11   |  19 |     | X03 |     |   0/3   |   2/3   | TCC1/1 | TCC0/3 | I2S/FS0  | GCLK_IO5 |
+   | 45         |                  |  PA24  | USB_NEGATIVE    | *USB/DM
+   | 46         |                  |  PA25  | USB_POSITIVE    | *USB/DP
    +------------+------------------+--------+-----------------+--------+-----+-----+-----+-----+---------+---------+--------+--------+----------+----------+
    */
 
@@ -152,7 +154,9 @@ const PinDescription g_APinDescription[]=
   { PORTB,  1, PIO_DIGITAL, PIN_ATTR_DIGITAL,                             No_ADC_Channel, NOT_ON_PWM, NOT_ON_TIMER, EXTERNAL_INT_1  },
   { PORTB,  5, PIO_DIGITAL, PIN_ATTR_DIGITAL,                             No_ADC_Channel, NOT_ON_PWM, NOT_ON_TIMER, EXTERNAL_INT_5  },
   { PORTB, 10, PIO_DIGITAL, PIN_ATTR_DIGITAL,                             No_ADC_Channel, NOT_ON_PWM, NOT_ON_TIMER, EXTERNAL_INT_6  },
-  { PORTA, 11, PIO_DIGITAL, PIN_ATTR_DIGITAL,                             No_ADC_Channel, NOT_ON_PWM, NOT_ON_TIMER, EXTERNAL_INT_NONE}
+  { PORTA, 11, PIO_DIGITAL, PIN_ATTR_DIGITAL,                             No_ADC_Channel, NOT_ON_PWM, NOT_ON_TIMER, EXTERNAL_INT_NONE},
+  { PORTA, 24, PIO_COM,     PIN_ATTR_NONE,                                No_ADC_Channel, NOT_ON_PWM, NOT_ON_TIMER, EXTERNAL_INT_NONE }, // USB/DM
+  { PORTA, 25, PIO_COM,     PIN_ATTR_NONE,                                No_ADC_Channel, NOT_ON_PWM, NOT_ON_TIMER, EXTERNAL_INT_NONE } // USB/DP
 };
 
 const void* g_apTCInstances[TCC_INST_NUM+TC_INST_NUM]={ TCC0, TCC1, TCC2, TC3, TC4, TC5 } ;
