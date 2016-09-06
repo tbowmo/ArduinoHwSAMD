@@ -181,6 +181,8 @@ static const uint8_t SCK2 = PIN_SPI2_SCK;
 
 #define PIN_WIRE_SDA         (07u)
 #define PIN_WIRE_SCL         (06u)
+#define PERIPH_WIRE          sercom3
+#define WIRE_IT_HANDLER      SERCOM3_Handler
 
 static const uint8_t SDA = PIN_WIRE_SDA;
 static const uint8_t SCL = PIN_WIRE_SCL;
@@ -188,9 +190,9 @@ static const uint8_t SCL = PIN_WIRE_SCL;
 /*
  * USB
  */
-#define PIN_USB_HOST_ENABLE (27ul)
-#define PIN_USB_DM (28ul)
-#define PIN_USB_DP (29ul)
+#define PIN_USB_HOST_ENABLE LED_ORANGE
+#define PIN_USB_DM (45ul)
+#define PIN_USB_DP (46ul)
 
 #ifdef __cplusplus
 }
