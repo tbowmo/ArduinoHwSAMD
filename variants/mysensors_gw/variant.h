@@ -179,8 +179,8 @@ static const uint8_t SCK2 = PIN_SPI2_SCK;
  */
 #define WIRE_INTERFACES_COUNT 1
 
-#define PIN_WIRE_SDA         (07u)
-#define PIN_WIRE_SCL         (06u)
+#define PIN_WIRE_SDA         (7u)
+#define PIN_WIRE_SCL         (6u)
 #define PERIPH_WIRE          sercom3
 #define WIRE_IT_HANDLER      SERCOM3_Handler
 
@@ -202,16 +202,16 @@ static const uint8_t SCL = PIN_WIRE_SCL;
  * MYSX pins
  */
 
-#define MYSX_D1_DFM (00ul)
-#define MYSX_D2_DTM (01ul)
-#define MYSX_D3_INT (02ul)
-#define MYSX_D4_INT (03ul)
-#define MYSX_D5_PWM (04ul)
-#define MYSX_D6_PWM (05ul)
-#define MYSX_D7_SCL (06ul)
-#define MYSX_D8_SDA (07ul)
-#define MYSX_D9_A3 (08ul)
-#define MYSX_D10_A4 (09ul)
+#define MYSX_D1_DFM (0ul)
+#define MYSX_D2_DTM (1ul)
+#define MYSX_D3_INT (2ul)
+#define MYSX_D4_INT (3ul)
+#define MYSX_D5_PWM (4ul)
+#define MYSX_D6_PWM (5ul)
+#define MYSX_D7_SCL (6ul)
+#define MYSX_D8_SDA (7ul)
+#define MYSX_D9_A3 (8ul)
+#define MYSX_D10_A4 (9ul)
 #define MYSX_D11_MOSI (10ul)
 #define MYSX_D12_MISO (11ul)
 #define MYSX_D13_SCK (12ul)
